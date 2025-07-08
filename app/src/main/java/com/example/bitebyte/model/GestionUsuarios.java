@@ -1,9 +1,10 @@
-package com.example.bitebyte;
+package com.example.bitebyte.model;
 
 import java.util.HashMap;
 import com.google.firebase.database.*;
 
 import android.util.Log;
+
 public class GestionUsuarios {
 
     private final HashMap<String, Usuario> usuarios = new HashMap<>();

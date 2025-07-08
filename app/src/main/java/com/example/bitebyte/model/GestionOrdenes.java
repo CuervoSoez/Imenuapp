@@ -1,9 +1,9 @@
-package com.example.bitebyte;
+package com.example.bitebyte.model;
+
 
 import android.util.Log;
 
 import com.google.firebase.database.*;
-import com.example.bitebyte.Orden;
 
 import java.util.TreeMap;
 
@@ -17,11 +17,12 @@ public class GestionOrdenes {
     }
 
     public void agregarOrden(Orden orden) {
-        refOrdenes.child(orden.getIdOrden()).setValue(orden);
+        refOrdenes.child(orden.getId()).setValue(orden);
     }
 
     public void borrarOrden(String idOrden) {
         refOrdenes.child(idOrden).removeValue();
+        ordenes.remove(idOrden);
     }
 
     public Orden obtenerOrden(String idOrden) {
@@ -39,16 +40,26 @@ public class GestionOrdenes {
                 ordenes.clear();
                 for (DataSnapshot ds : snapshot.getChildren()) {
                     Orden orden = ds.getValue(Orden.class);
-                    if (orden != null) {
-                        ordenes.put(orden.getIdOrden(), orden);
+                    if (orden != null && orden.getId() != null) {
+                        ordenes.put(orden.getId(), orden);
+                    } else {
+                        Log.w("GestionOrdenes", "Orden nula o sin ID en snapshot");
                     }
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError error) {
-                Log.e("GestionOrdenes", "Error al leer órdenes: " + error.getMessage());
+                Log.e("GestionOrdenes", "Error al escuchar órdenes: " + error.getMessage());
             }
         });
+    }
+
+    public TreeMap<String, Orden> getOrdenes() {
+        return ordenes;
+    }
+
+    public DatabaseReference getRefOrdenes() {
+        return refOrdenes;
     }
 }
