@@ -1,5 +1,6 @@
 package com.example.imenuapp;
-
+import com.example.imenuapp.manager.CartManager;
+import com.example.imenuapp.model.MenuItem;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
