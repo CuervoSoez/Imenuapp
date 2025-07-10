@@ -35,8 +35,15 @@ public class RegistrarPedidoActivity extends AppCompatActivity {
             String cliente = etNombreCliente.getText().toString();
             String plato = spinnerPlatos.getSelectedItem().toString();
             String cantidad = etCantidad.getText().toString();
+            
+            MenuItem item = (MenuItem) spinnerPlatos.getSelectedItem();
+            int cantidad = Integer.parseInt(etCantidad.getText().toString());
 
-            tvConfirmacion.setText("Pedido registrado: " + cliente + " pidió " + cantidad + " " + plato);
+            for (int i = 0; i < cantidad; i++) {
+                CartManager.getInstance().addItem(item);
+            }
+
+            tvConfirmacion.setText("Pedido añadido. Total actual: $" + CartManager.getInstance().getTotal());
         });
     }
 }
