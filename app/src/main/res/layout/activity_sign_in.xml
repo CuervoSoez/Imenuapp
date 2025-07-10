@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"> <?xml version="1.0" encoding="utf-8"?>
+        <?xml version="1.0" encoding="utf-8"?>
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF9ED"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+
+                <TextView
+                    android:id="@+id/tvSignIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign In"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#222222"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginBottom="24dp" />
+
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Email"
+                    android:drawableEnd="@android:drawable/ic_menu_send"
+                    android:background="@drawable/edittext_background"
+                    android:padding="12dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#111111"
+                    android:textColorHint="#888888"
+                    android:layout_marginBottom="16dp"/>
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Password"
+                    android:drawableEnd="@android:drawable/ic_lock_idle_lock"
+                    android:background="@drawable/edittext_background"
+                    android:padding="12dp"
+                    android:inputType="textPassword"
+                    android:textColor="#111111"
+                    android:textColorHint="#888888"
+                    android:layout_marginBottom="8dp"/>
+
+
+                <TextView
+                    android:id="@+id/tvForgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot password?"
+                    android:textColor="#F44336"
+                    android:textSize="14sp"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="24dp" />
+
+
+                <Button
+                    android:id="@+id/btnSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="SIGN IN"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_red"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="24dp"/>
+
+
+                <TextView
+                    android:id="@+id/tvSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account? Sign up."
+                    android:textColor="#F44336"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="32dp"/>
+
+
+                <LinearLayout
+                    android:id="@+id/socialContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/btnFacebook"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_facebook"
+                        android:contentDescription="Facebook"
+                        android:layout_margin="8dp"/>
+
+                    <ImageView
+                        android:id="@+id/btnInstagram"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_instagram"
+                        android:contentDescription="Instagram"
+                        android:layout_margin="8dp"/>
+
+                    <ImageView
+                        android:id="@+id/btnTwitter"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_twitter"
+                        android:contentDescription="Twitter"
+                        android:layout_margin="8dp"/>
+
+                    <ImageView
+                        android:id="@+id/btnGoogle"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_google"
+                        android:contentDescription="Google"
+                        android:layout_margin="8dp"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
