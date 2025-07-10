@@ -7,4 +7,9 @@
     <string name="hint_contraseña">Ingresa tu contraseña</string>
     <string name="registrar">Registrar</string>
     <string name="imagen_usuario">Imagen del usuario</string>
+    <string-array name="roles_array">
+        <item>Comensal</item>
+        <item>Mesero</item>
+        <item>Cocinero</item>
+    </string-array>
 </resources>
